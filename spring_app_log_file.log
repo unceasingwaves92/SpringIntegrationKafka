@@ -1,0 +1,1102 @@
+2023-02-25 13:17:38 - Starting SpringIntegrationKafkaApplicationTests using Java 1.8.0_144 on DESKTOP-3TVHP8S with PID 14800 (started by Dell in C:\Users\Dell\IdeaProjects\SpringProject_Emexo\SpringProject\SpringIntegrationKafka)
+2023-02-25 13:17:38 - Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-02-25 13:17:38 - No active profile set, falling back to 1 default profile: "default"
+2023-02-25 13:17:39 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-02-25 13:17:39 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-02-25 13:17:40 - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-25 13:17:40 - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-25 13:17:43 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-25 13:17:43 - Channel 'application.errorChannel' has 1 subscriber(s).
+2023-02-25 13:17:43 - started bean '_org.springframework.integration.errorLogger'
+2023-02-25 13:17:43 - Adding {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-02-25 13:17:43 - Channel 'application.consumingChannel' has 1 subscriber(s).
+2023-02-25 13:17:43 - started bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-02-25 13:17:43 - Adding {kafka:outbound-channel-adapter:producingChannelConfiguration.kafkaMessageHandler.serviceActivator} as a subscriber to the 'producingChannel' channel
+2023-02-25 13:17:43 - Channel 'application.producingChannel' has 1 subscriber(s).
+2023-02-25 13:17:43 - started bean 'producingChannelConfiguration.kafkaMessageHandler.serviceActivator'
+2023-02-25 13:17:43 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spring-integration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-integration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-02-25 13:17:44 - Kafka version: 3.1.2
+2023-02-25 13:17:44 - Kafka commitId: f8c67dc3ae0a3265
+2023-02-25 13:17:44 - Kafka startTimeMs: 1677311264481
+2023-02-25 13:17:44 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Subscribed to topic(s): test
+2023-02-25 13:17:44 - started bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [com/myspringboot/kafka/configuration/ConsumingChannelConfiguration.class]'; from source: 'com.myspringboot.kafka.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-02-25 13:17:44 - Started SpringIntegrationKafkaApplicationTests in 7.598 seconds (JVM running for 15.485)
+2023-02-25 13:17:45 - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2023-02-25 13:17:45 - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-02-25 13:17:45 - Kafka version: 3.1.2
+2023-02-25 13:17:45 - Kafka commitId: f8c67dc3ae0a3265
+2023-02-25 13:17:45 - Kafka startTimeMs: 1677311265547
+2023-02-25 13:17:47 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:17:47 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:47 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:47 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:17:47 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:47 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:49 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:17:49 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:49 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:49 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:17:49 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:49 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:51 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:17:51 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:51 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:51 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:17:51 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:51 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:53 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:17:53 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:53 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:54 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:17:54 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:54 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:56 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:17:56 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:56 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:56 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:17:56 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:56 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:59 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:17:59 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:59 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:17:59 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:17:59 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:17:59 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:02 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:02 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:02 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:02 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:02 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:02 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:05 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:05 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:05 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:05 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:05 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:05 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:08 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:08 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:08 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:08 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:08 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:08 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:11 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:11 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:11 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:12 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:12 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:12 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:15 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:15 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:15 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:18 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:18 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:18 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:20 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:20 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:20 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:21 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:21 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:21 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:23 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:23 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:23 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:24 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:24 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:24 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:26 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:26 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:26 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:27 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:27 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:27 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:30 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:30 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:30 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:32 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:32 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:32 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:33 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:33 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:33 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:35 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:35 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:35 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:36 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:36 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:36 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:38 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:38 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:38 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:39 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:39 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:39 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:41 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:41 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:41 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:42 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:42 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:42 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:44 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-02-25 13:18:44 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:44 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:45 - [Producer clientId=producer-1] Node -1 disconnected.
+2023-02-25 13:18:45 - [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-02-25 13:18:45 - [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-02-25 13:18:45 - Exception thrown when sending a message with key='test' and payload='Hello Spring Integration Kafka 0!' to topic test:
+org.apache.kafka.common.errors.TimeoutException: Topic test not present in metadata after 60000 ms.
+2023-02-25 13:18:46 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting generation due to: consumer pro-actively leaving the group
+2023-02-25 13:18:46 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: consumer pro-actively leaving the group
+2023-02-25 13:18:46 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Unsubscribed all topics or patterns and assigned partitions
+2023-02-25 13:18:46 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting generation due to: consumer pro-actively leaving the group
+2023-02-25 13:18:46 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: consumer pro-actively leaving the group
+2023-02-25 13:18:46 - Metrics scheduler closed
+2023-02-25 13:18:46 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-02-25 13:18:46 - Metrics reporters closed
+2023-02-25 13:18:46 - App info kafka.consumer for consumer-spring-integration-1 unregistered
+2023-02-25 13:18:46 - spring-integration: Consumer stopped
+2023-02-25 13:18:46 - stopped bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [com/myspringboot/kafka/configuration/ConsumingChannelConfiguration.class]'; from source: 'com.myspringboot.kafka.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-02-25 13:18:46 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-25 13:18:46 - Channel 'application.errorChannel' has 0 subscriber(s).
+2023-02-25 13:18:46 - stopped bean '_org.springframework.integration.errorLogger'
+2023-02-25 13:18:46 - Removing {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-02-25 13:18:46 - Channel 'application.consumingChannel' has 0 subscriber(s).
+2023-02-25 13:18:46 - stopped bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-02-25 13:18:46 - Removing {kafka:outbound-channel-adapter:producingChannelConfiguration.kafkaMessageHandler.serviceActivator} as a subscriber to the 'producingChannel' channel
+2023-02-25 13:18:46 - Channel 'application.producingChannel' has 0 subscriber(s).
+2023-02-25 13:18:46 - stopped bean 'producingChannelConfiguration.kafkaMessageHandler.serviceActivator'
+2023-02-25 13:18:46 - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-02-25 13:18:46 - Metrics scheduler closed
+2023-02-25 13:18:46 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-02-25 13:18:46 - Metrics reporters closed
+2023-02-25 13:18:46 - App info kafka.producer for producer-1 unregistered
+2023-02-25 13:22:04 - Starting SpringIntegrationKafkaApplicationTests using Java 1.8.0_144 on DESKTOP-3TVHP8S with PID 10252 (started by Dell in C:\Users\Dell\IdeaProjects\SpringProject_Emexo\SpringProject\SpringIntegrationKafka)
+2023-02-25 13:22:04 - Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-02-25 13:22:04 - No active profile set, falling back to 1 default profile: "default"
+2023-02-25 13:22:05 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-02-25 13:22:06 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-02-25 13:22:06 - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-25 13:22:06 - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-25 13:22:10 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-25 13:22:10 - Channel 'application.errorChannel' has 1 subscriber(s).
+2023-02-25 13:22:10 - started bean '_org.springframework.integration.errorLogger'
+2023-02-25 13:22:10 - Adding {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-02-25 13:22:10 - Channel 'application.consumingChannel' has 1 subscriber(s).
+2023-02-25 13:22:10 - started bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-02-25 13:22:10 - Adding {kafka:outbound-channel-adapter:producingChannelConfiguration.kafkaMessageHandler.serviceActivator} as a subscriber to the 'producingChannel' channel
+2023-02-25 13:22:10 - Channel 'application.producingChannel' has 1 subscriber(s).
+2023-02-25 13:22:10 - started bean 'producingChannelConfiguration.kafkaMessageHandler.serviceActivator'
+2023-02-25 13:22:10 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spring-integration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-integration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-02-25 13:22:11 - Kafka version: 3.1.2
+2023-02-25 13:22:11 - Kafka commitId: f8c67dc3ae0a3265
+2023-02-25 13:22:11 - Kafka startTimeMs: 1677311531207
+2023-02-25 13:22:11 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Subscribed to topic(s): test
+2023-02-25 13:22:11 - started bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [com/myspringboot/kafka/configuration/ConsumingChannelConfiguration.class]'; from source: 'com.myspringboot.kafka.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-02-25 13:22:11 - Started SpringIntegrationKafkaApplicationTests in 7.696 seconds (JVM running for 11.077)
+2023-02-25 13:22:12 - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2023-02-25 13:22:12 - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-02-25 13:22:12 - Kafka version: 3.1.2
+2023-02-25 13:22:12 - Kafka commitId: f8c67dc3ae0a3265
+2023-02-25 13:22:12 - Kafka startTimeMs: 1677311532714
+2023-02-25 13:22:13 - [Producer clientId=producer-1] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to Ub4M9v5yRO6r7ej5-MWFjA
+2023-02-25 13:22:13 - [Producer clientId=producer-1] Cluster ID: Ddr4ARlQSBurVZEte9vMBw
+2023-02-25 13:22:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to Ub4M9v5yRO6r7ej5-MWFjA
+2023-02-25 13:22:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Cluster ID: Ddr4ARlQSBurVZEte9vMBw
+2023-02-25 13:22:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Discovered group coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null)
+2023-02-25 13:22:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-02-25 13:22:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: need to re-join with the given member-id
+2023-02-25 13:22:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-02-25 13:22:13 - [Producer clientId=producer-1] ProducerId set to 2000 with epoch 0
+2023-02-25 13:22:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully joined group with generation Generation{generationId=12, memberId='consumer-spring-integration-1-7e2e080d-45b0-4acd-838a-dd9645db8fee', protocol='range'}
+2023-02-25 13:22:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully synced group in generation Generation{generationId=12, memberId='consumer-spring-integration-1-7e2e080d-45b0-4acd-838a-dd9645db8fee', protocol='range'}
+2023-02-25 13:22:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-02-25 13:22:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Adding newly assigned partitions: test-0
+2023-02-25 13:22:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Setting offset for partition test-0 to the committed offset FetchPosition{offset=23, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-3TVHP8S:9092 (id: 0 rack: null)], epoch=0}}
+2023-02-25 13:22:15 - spring-integration: partitions assigned: [test-0]
+2023-02-25 13:22:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Revoke previously assigned partitions test-0
+2023-02-25 13:22:24 - spring-integration: partitions revoked: [test-0]
+2023-02-25 13:22:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Member consumer-spring-integration-1-7e2e080d-45b0-4acd-838a-dd9645db8fee sending LeaveGroup request to coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-02-25 13:22:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting generation due to: consumer pro-actively leaving the group
+2023-02-25 13:22:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: consumer pro-actively leaving the group
+2023-02-25 13:22:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Unsubscribed all topics or patterns and assigned partitions
+2023-02-25 13:22:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting generation due to: consumer pro-actively leaving the group
+2023-02-25 13:22:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: consumer pro-actively leaving the group
+2023-02-25 13:22:24 - Metrics scheduler closed
+2023-02-25 13:22:24 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-02-25 13:22:24 - Metrics reporters closed
+2023-02-25 13:22:24 - App info kafka.consumer for consumer-spring-integration-1 unregistered
+2023-02-25 13:22:24 - spring-integration: Consumer stopped
+2023-02-25 13:22:24 - stopped bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [com/myspringboot/kafka/configuration/ConsumingChannelConfiguration.class]'; from source: 'com.myspringboot.kafka.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-02-25 13:22:24 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-25 13:22:24 - Channel 'application.errorChannel' has 0 subscriber(s).
+2023-02-25 13:22:24 - stopped bean '_org.springframework.integration.errorLogger'
+2023-02-25 13:22:24 - Removing {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-02-25 13:22:24 - Channel 'application.consumingChannel' has 0 subscriber(s).
+2023-02-25 13:22:24 - stopped bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-02-25 13:22:24 - Removing {kafka:outbound-channel-adapter:producingChannelConfiguration.kafkaMessageHandler.serviceActivator} as a subscriber to the 'producingChannel' channel
+2023-02-25 13:22:24 - Channel 'application.producingChannel' has 0 subscriber(s).
+2023-02-25 13:22:24 - stopped bean 'producingChannelConfiguration.kafkaMessageHandler.serviceActivator'
+2023-02-25 13:22:24 - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-02-25 13:22:24 - Metrics scheduler closed
+2023-02-25 13:22:24 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-02-25 13:22:24 - Metrics reporters closed
+2023-02-25 13:22:24 - App info kafka.producer for producer-1 unregistered
+2023-02-25 13:26:28 - Starting SpringIntegrationKafkaApplicationTests using Java 1.8.0_144 on DESKTOP-3TVHP8S with PID 2424 (started by Dell in C:\Users\Dell\IdeaProjects\SpringProject_Emexo\SpringProject\SpringIntegrationKafka)
+2023-02-25 13:26:28 - Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-02-25 13:26:28 - No active profile set, falling back to 1 default profile: "default"
+2023-02-25 13:26:30 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-02-25 13:26:30 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-02-25 13:26:31 - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-25 13:26:31 - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-25 13:26:34 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-25 13:26:34 - Channel 'application.errorChannel' has 1 subscriber(s).
+2023-02-25 13:26:34 - started bean '_org.springframework.integration.errorLogger'
+2023-02-25 13:26:34 - Adding {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-02-25 13:26:34 - Channel 'application.consumingChannel' has 1 subscriber(s).
+2023-02-25 13:26:34 - started bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-02-25 13:26:34 - Adding {kafka:outbound-channel-adapter:producingChannelConfiguration.kafkaMessageHandler.serviceActivator} as a subscriber to the 'producingChannel' channel
+2023-02-25 13:26:34 - Channel 'application.producingChannel' has 1 subscriber(s).
+2023-02-25 13:26:34 - started bean 'producingChannelConfiguration.kafkaMessageHandler.serviceActivator'
+2023-02-25 13:26:34 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spring-integration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-integration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-02-25 13:26:35 - Kafka version: 3.1.2
+2023-02-25 13:26:35 - Kafka commitId: f8c67dc3ae0a3265
+2023-02-25 13:26:35 - Kafka startTimeMs: 1677311795888
+2023-02-25 13:26:35 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Subscribed to topic(s): test
+2023-02-25 13:26:35 - started bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [com/myspringboot/kafka/configuration/ConsumingChannelConfiguration.class]'; from source: 'com.myspringboot.kafka.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-02-25 13:26:35 - Started SpringIntegrationKafkaApplicationTests in 8.537 seconds (JVM running for 11.937)
+2023-02-25 13:26:37 - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2023-02-25 13:26:37 - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-02-25 13:26:37 - Kafka version: 3.1.2
+2023-02-25 13:26:37 - Kafka commitId: f8c67dc3ae0a3265
+2023-02-25 13:26:37 - Kafka startTimeMs: 1677311797355
+2023-02-25 13:26:37 - [Producer clientId=producer-1] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to Ub4M9v5yRO6r7ej5-MWFjA
+2023-02-25 13:26:37 - [Producer clientId=producer-1] Cluster ID: Ddr4ARlQSBurVZEte9vMBw
+2023-02-25 13:26:37 - [Producer clientId=producer-1] ProducerId set to 2001 with epoch 0
+2023-02-25 13:26:37 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to Ub4M9v5yRO6r7ej5-MWFjA
+2023-02-25 13:26:37 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Cluster ID: Ddr4ARlQSBurVZEte9vMBw
+2023-02-25 13:26:37 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Discovered group coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null)
+2023-02-25 13:26:37 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-02-25 13:26:38 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: need to re-join with the given member-id
+2023-02-25 13:26:38 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-02-25 13:26:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully joined group with generation Generation{generationId=14, memberId='consumer-spring-integration-1-5d27de0a-dd5d-4946-b973-b51f3c61c8ae', protocol='range'}
+2023-02-25 13:26:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully synced group in generation Generation{generationId=14, memberId='consumer-spring-integration-1-5d27de0a-dd5d-4946-b973-b51f3c61c8ae', protocol='range'}
+2023-02-25 13:26:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-02-25 13:26:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Adding newly assigned partitions: test-0
+2023-02-25 13:26:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Setting offset for partition test-0 to the committed offset FetchPosition{offset=33, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-3TVHP8S:9092 (id: 0 rack: null)], epoch=0}}
+2023-02-25 13:26:40 - spring-integration: partitions assigned: [test-0]
+2023-02-25 13:26:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Revoke previously assigned partitions test-0
+2023-02-25 13:26:48 - spring-integration: partitions revoked: [test-0]
+2023-02-25 13:26:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Member consumer-spring-integration-1-5d27de0a-dd5d-4946-b973-b51f3c61c8ae sending LeaveGroup request to coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-02-25 13:26:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting generation due to: consumer pro-actively leaving the group
+2023-02-25 13:26:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: consumer pro-actively leaving the group
+2023-02-25 13:26:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Unsubscribed all topics or patterns and assigned partitions
+2023-02-25 13:26:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting generation due to: consumer pro-actively leaving the group
+2023-02-25 13:26:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: consumer pro-actively leaving the group
+2023-02-25 13:26:48 - Metrics scheduler closed
+2023-02-25 13:26:48 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-02-25 13:26:48 - Metrics reporters closed
+2023-02-25 13:26:48 - App info kafka.consumer for consumer-spring-integration-1 unregistered
+2023-02-25 13:26:48 - spring-integration: Consumer stopped
+2023-02-25 13:26:48 - stopped bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [com/myspringboot/kafka/configuration/ConsumingChannelConfiguration.class]'; from source: 'com.myspringboot.kafka.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-02-25 13:26:48 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-25 13:26:48 - Channel 'application.errorChannel' has 0 subscriber(s).
+2023-02-25 13:26:48 - stopped bean '_org.springframework.integration.errorLogger'
+2023-02-25 13:26:48 - Removing {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-02-25 13:26:48 - Channel 'application.consumingChannel' has 0 subscriber(s).
+2023-02-25 13:26:48 - stopped bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-02-25 13:26:48 - Removing {kafka:outbound-channel-adapter:producingChannelConfiguration.kafkaMessageHandler.serviceActivator} as a subscriber to the 'producingChannel' channel
+2023-02-25 13:26:48 - Channel 'application.producingChannel' has 0 subscriber(s).
+2023-02-25 13:26:48 - stopped bean 'producingChannelConfiguration.kafkaMessageHandler.serviceActivator'
+2023-02-25 13:26:48 - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-02-25 13:26:48 - Metrics scheduler closed
+2023-02-25 13:26:48 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-02-25 13:26:48 - Metrics reporters closed
+2023-02-25 13:26:48 - App info kafka.producer for producer-1 unregistered
+2023-02-25 13:36:51 - Starting SpringIntegrationKafkaApplicationTests using Java 1.8.0_144 on DESKTOP-3TVHP8S with PID 8052 (started by Dell in C:\Users\Dell\IdeaProjects\SpringProject_Emexo\SpringProject\SpringIntegrationKafka)
+2023-02-25 13:36:51 - Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-02-25 13:36:51 - No active profile set, falling back to 1 default profile: "default"
+2023-02-25 13:36:52 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-02-25 13:36:52 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-02-25 13:36:53 - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-25 13:36:53 - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-25 13:36:56 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-25 13:36:56 - Channel 'application.errorChannel' has 1 subscriber(s).
+2023-02-25 13:36:56 - started bean '_org.springframework.integration.errorLogger'
+2023-02-25 13:36:56 - Adding {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-02-25 13:36:56 - Channel 'application.consumingChannel' has 1 subscriber(s).
+2023-02-25 13:36:56 - started bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-02-25 13:36:56 - Adding {kafka:outbound-channel-adapter:producingChannelConfiguration.kafkaMessageHandler.serviceActivator} as a subscriber to the 'producingChannel' channel
+2023-02-25 13:36:56 - Channel 'application.producingChannel' has 1 subscriber(s).
+2023-02-25 13:36:56 - started bean 'producingChannelConfiguration.kafkaMessageHandler.serviceActivator'
+2023-02-25 13:36:56 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spring-integration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-integration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-02-25 13:36:58 - Kafka version: 3.1.2
+2023-02-25 13:36:58 - Kafka commitId: f8c67dc3ae0a3265
+2023-02-25 13:36:58 - Kafka startTimeMs: 1677312418088
+2023-02-25 13:36:58 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Subscribed to topic(s): test
+2023-02-25 13:36:58 - started bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [com/myspringboot/kafka/configuration/ConsumingChannelConfiguration.class]'; from source: 'com.myspringboot.kafka.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-02-25 13:36:58 - Started SpringIntegrationKafkaApplicationTests in 7.953 seconds (JVM running for 11.64)
+2023-02-25 13:36:59 - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2023-02-25 13:36:59 - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-02-25 13:36:59 - Kafka version: 3.1.2
+2023-02-25 13:36:59 - Kafka commitId: f8c67dc3ae0a3265
+2023-02-25 13:36:59 - Kafka startTimeMs: 1677312419509
+2023-02-25 13:36:59 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to Ub4M9v5yRO6r7ej5-MWFjA
+2023-02-25 13:36:59 - [Producer clientId=producer-1] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to Ub4M9v5yRO6r7ej5-MWFjA
+2023-02-25 13:36:59 - [Producer clientId=producer-1] Cluster ID: Ddr4ARlQSBurVZEte9vMBw
+2023-02-25 13:36:59 - [Producer clientId=producer-1] ProducerId set to 2002 with epoch 0
+2023-02-25 13:36:59 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Cluster ID: Ddr4ARlQSBurVZEte9vMBw
+2023-02-25 13:36:59 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Discovered group coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null)
+2023-02-25 13:36:59 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-02-25 13:36:59 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: need to re-join with the given member-id
+2023-02-25 13:36:59 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-02-25 13:37:00 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully joined group with generation Generation{generationId=18, memberId='consumer-spring-integration-1-671c905a-d4d9-4993-965b-c2cfc8efa9b8', protocol='range'}
+2023-02-25 13:37:00 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully synced group in generation Generation{generationId=18, memberId='consumer-spring-integration-1-671c905a-d4d9-4993-965b-c2cfc8efa9b8', protocol='range'}
+2023-02-25 13:37:00 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-02-25 13:37:00 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Adding newly assigned partitions: test-0
+2023-02-25 13:37:00 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Setting offset for partition test-0 to the committed offset FetchPosition{offset=43, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-3TVHP8S:9092 (id: 0 rack: null)], epoch=0}}
+2023-02-25 13:37:00 - spring-integration: partitions assigned: [test-0]
+2023-02-25 13:37:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Revoke previously assigned partitions test-0
+2023-02-25 13:37:10 - spring-integration: partitions revoked: [test-0]
+2023-02-25 13:37:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Member consumer-spring-integration-1-671c905a-d4d9-4993-965b-c2cfc8efa9b8 sending LeaveGroup request to coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-02-25 13:37:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting generation due to: consumer pro-actively leaving the group
+2023-02-25 13:37:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: consumer pro-actively leaving the group
+2023-02-25 13:37:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Unsubscribed all topics or patterns and assigned partitions
+2023-02-25 13:37:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting generation due to: consumer pro-actively leaving the group
+2023-02-25 13:37:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: consumer pro-actively leaving the group
+2023-02-25 13:37:10 - Metrics scheduler closed
+2023-02-25 13:37:10 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-02-25 13:37:10 - Metrics reporters closed
+2023-02-25 13:37:10 - App info kafka.consumer for consumer-spring-integration-1 unregistered
+2023-02-25 13:37:10 - spring-integration: Consumer stopped
+2023-02-25 13:37:10 - stopped bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [com/myspringboot/kafka/configuration/ConsumingChannelConfiguration.class]'; from source: 'com.myspringboot.kafka.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-02-25 13:37:10 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-25 13:37:10 - Channel 'application.errorChannel' has 0 subscriber(s).
+2023-02-25 13:37:10 - stopped bean '_org.springframework.integration.errorLogger'
+2023-02-25 13:37:10 - Removing {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-02-25 13:37:10 - Channel 'application.consumingChannel' has 0 subscriber(s).
+2023-02-25 13:37:10 - stopped bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-02-25 13:37:10 - Removing {kafka:outbound-channel-adapter:producingChannelConfiguration.kafkaMessageHandler.serviceActivator} as a subscriber to the 'producingChannel' channel
+2023-02-25 13:37:10 - Channel 'application.producingChannel' has 0 subscriber(s).
+2023-02-25 13:37:10 - stopped bean 'producingChannelConfiguration.kafkaMessageHandler.serviceActivator'
+2023-02-25 13:37:10 - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-02-25 13:37:10 - Metrics scheduler closed
+2023-02-25 13:37:10 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-02-25 13:37:10 - Metrics reporters closed
+2023-02-25 13:37:10 - App info kafka.producer for producer-1 unregistered
